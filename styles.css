@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.wrapper {
+  width: 320px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid white 2px;
+  color: white;
+  background-color: rgb(1, 38, 1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+}
+.inputs h2 {
+  font-size: 3rem;
+}
+.num1 {
+  padding-right: 30px;
+}
+.num2 {
+  padding-left: 30px;
+}
+.progWrapper {
+  display: flex;
+  border: solid 1px white;
+  border-right: none;
+  position: relative;
+}
+.progBarContainer {
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  border-right: solid 1px white;
+  display: flex;
+}
+.progSlider {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(0, 0, 255, 0.3);
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform 0.4s ease-in-out;
+}
+.overlay {
+  color: white;
+  width: 320px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  opacity: 0.65;
+  display: none;
+  transition: all 0.33s ease-in-out;
+  
+}
+.overlayInner {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  display: block;
+}
+.activeBlur{
+    filter: blur(4px);
+}
+.animateWrong{
+    animation: showError .33s;
+}
+@keyframes showError{
+    50%{
+        color: red;
+        transform:scale(1.2)
+    }
+    100%{
+         color:white;
+        transform:scale(1)
+    }
+}

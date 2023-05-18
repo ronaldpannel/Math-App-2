@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math.App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <h1>Math Game</h1>
+      <div class="inputs" id="inputs">
+        <h2 class="num1" id="num1">3</h2>
+        <h2 class="operator" id="operator">+</h2>
+        <h2 class="num2" id="num2">2</h2>
+      </div>
+      <div class="scoreBoard" id="scoreBoard">
+        <p>You need ten points to win, Score: <span id="correctScore">0</span></p>
+        <p>You have <span id="wrongAnswer">3</span> wrong answers left before you lose</p>
+        <div class="progWrapper">
+          <div class="progSlider" id="progSlider"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+          <div class="progBarContainer"></div>
+        </div>
+      </div>
+
+     <form action="" class="myForm" id="myForm">
+        <input class="userAnswer" id="userAnswer" type="number" name="answer" autocomplete="off" placeholder="enter Answer" />
+        <button  class="submitBtn" id="submitBtn"">Submit</button>
+
+     </form>
+
+    
+    </div>
+     <div class="overlay" id="overlay">
+        <div class="overlayInner" id="overlayInner" >
+            <p class="gameOverText" id="gameOverText" >Great, You Won</p>
+            <button class="restartBtn" id="restartBtn">Start Game</button>
+        </div>
+    </div>
+  </body>
+</html>
